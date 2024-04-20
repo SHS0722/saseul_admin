@@ -11,8 +11,7 @@ const MainBody = () => {
     const [totalPage,setTotalPage] = useState(0);
     const [inputData, setInputData] = useState('')
     const searchUsers = async() => {
-        console.log('dd')
-        const response = await axios.get(`http://localhost:4000/user/?page=1&search=`)
+        const response = await axios.get(`http://15.164.77.173:4000/user/?page=1&search=`)
         console.log(response)
         setUsers(response.data.users)
         setTotalPage(response.data.totalPages)

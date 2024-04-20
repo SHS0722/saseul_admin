@@ -3,7 +3,7 @@ import axios from "axios";
 const Paging = (props) => {
     let {setUsers,currentPage,setCurrentPage,totalPage,setTotalPage,inputData} = props;
     const searchUsers = async(page) => {
-        const response = await axios.get(`http://localhost:4000/user/?page=${page}&search=${inputData}`)
+        const response = await axios.get(`http://15.164.77.173:4000/user/?page=${page}&search=${inputData}`)
         setUsers(response.data.users)
         setTotalPage(response.data.totalPages)
     }

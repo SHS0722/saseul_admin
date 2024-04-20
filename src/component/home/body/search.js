@@ -6,7 +6,7 @@ import axios from "axios";
 const Search = (props) => {
     const { inputData, setInputData, setUsers, setTotalPage } = props;
     const searchUsers = async() => {
-        const response = await axios.get(`http://localhost:4000/user/?page=1&search=${inputData}`)
+        const response = await axios.get(`http://15.164.77.173:4000/user/?page=1&search=${inputData}`)
         setUsers(response.data.users)
         setTotalPage(response.data.totalPages)
     }

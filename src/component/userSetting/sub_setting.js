@@ -16,7 +16,7 @@ const SubSetting = (props) => {
         return regex.test(dateString);
     }
     const deleteSub = async() => {
-        const response = await axios.delete(`http://localhost:4000/subscription/${subscription.subscription_id}`)
+        const response = await axios.delete(`http://15.164.77.173:4000/subscription/${subscription.subscription_id}`)
         if(response.status === 200){
             const updatedSubscriptions = subscriptions.filter(sub => sub.subscription_id !== subscription.subscription_id);
             setSubscription(updatedSubscriptions)
@@ -48,7 +48,7 @@ const SubSetting = (props) => {
 
         }
 
-        const response = await axios.put(`http://localhost:4000/subscription/`,data)
+        const response = await axios.put(`http://15.164.77.173:4000/subscription/`,data)
         if(response.status === 200){
             alert('수정에 성공하였습니다.')
         }

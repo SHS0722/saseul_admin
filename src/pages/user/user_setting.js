@@ -13,15 +13,15 @@ const UserSetting = () => {
     const [ user, setUser ] = useState({})
 
     const getUserIps = async() => {
-        const response = await axios.get(`http://localhost:4000/ip/${user_id}`)
+        const response = await axios.get(`http://15.164.77.173:4000/ip/${user_id}`)
         setIps(response.data)
     }
     const getUserSub = async() => {
-        const response = await axios.get(`http://localhost:4000/subscription/${user_id}`)
+        const response = await axios.get(`http://15.164.77.173:4000/subscription/${user_id}`)
         setSubscription(response.data)
     }
     const getUser = async() => {
-        const response = await axios.get(`http://localhost:4000/user/${user_id}`)
+        const response = await axios.get(`http://15.164.77.173:4000/user/${user_id}`)
         setUser(response.data)
     }
     useEffect(()=>{

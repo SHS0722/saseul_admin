@@ -17,7 +17,7 @@ const IpSetting = (props) => {
             ip : newIp
         }
 
-        const response = await axios.put(`http://localhost:4000/ip/`,data)
+        const response = await axios.put(`http://15.164.77.173:4000/ip/`,data)
         if(response.status === 200){
             alert('수정에 성공하였습니다.')
         }
@@ -27,7 +27,7 @@ const IpSetting = (props) => {
             user_id,
             ip_id : ip.ip_id,
         }
-        const response = await axios.delete(`http://localhost:4000/ip/`,{ data : req})
+        const response = await axios.delete(`http://15.164.77.173:4000/ip/`,{ data : req})
         if(response.status === 200){
             const updatedIps = ips.filter(ipd => ipd.ip_id !== ip.ip_id);
             setIps(updatedIps)

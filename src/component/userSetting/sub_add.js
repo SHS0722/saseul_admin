@@ -41,7 +41,7 @@ const SubAdd = (props) => {
             end_date : endDate
         }
 
-        const response = await axios.post(`http://localhost:4000/subscription/${user_id}`,data)
+        const response = await axios.post(`http://15.164.77.173:4000/subscription/${user_id}`,data)
         if(response.status === 201){
             setSubDate('')
             setStartDate('')

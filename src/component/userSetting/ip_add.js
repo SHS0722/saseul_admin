@@ -14,7 +14,7 @@ const IpAdd = (props) => {
             ip : newIp
         }
 
-        const response = await axios.post(`http://localhost:4000/ip/`,data)
+        const response = await axios.post(`http://15.164.77.173:4000/ip/`,data)
         if(response.status === 201){
             setNewIp('')
             const updatedIps = [response.data, ...ips.slice(1)];
