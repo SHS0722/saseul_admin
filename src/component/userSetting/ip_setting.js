@@ -9,6 +9,7 @@ const IpSetting = (props) => {
 
         if(newIp === ''){
             alert('수정할 IP를 입력하세요.')
+            return
         }
 
         const data = {

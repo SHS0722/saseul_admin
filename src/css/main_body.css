@@ -87,6 +87,13 @@
   .user-setting-box h3 {
     width: 100%;
   }
+
+  .user_name-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .setting-container {
     width: 90%;
   }
